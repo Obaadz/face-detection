@@ -16,9 +16,9 @@ export async function findFace(
   return dbFace;
 }
 
-export async function insertUser(user: Face) {
+export async function insertFace(face: Face) {
   const dbFace: IFaceDocument = new FaceModel<Face>({
-    ...user,
+    ...face,
   });
 
   await dbFace.save();
@@ -33,6 +33,6 @@ export async function updateFace(
   await FaceModel.updateOne(query, update);
 }
 
-export async function deleteUser(query: FilterQuery<IFaceDocument>) {
+export async function deleteFace(query: FilterQuery<IFaceDocument>) {
   await FaceModel.deleteOne(query);
 }

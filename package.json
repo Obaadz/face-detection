@@ -5,7 +5,8 @@
   "description": "backend server",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "node ./public/index.js",
+    "build": "npx tsc",
     "monitor": "nodemon src/index.ts"
   },
   "author": "Obada Ali",

@@ -4,7 +4,7 @@ import { config } from "dotenv";
 import mongoose from "mongoose";
 import v1Routes from "./routes/v1/index";
 
-config({ path: ".env.local" });
+config({ path: ".env" });
 
 const PORT = process.env.PORT || 5000,
   DB_URI = process.env.DB_URI || "";
